@@ -90,5 +90,6 @@ except CogmemAiError as e:
 ## Links
 
 - [Developer Dashboard](https://hifriendbot.com/developer/)
+- [JavaScript SDK (npm)](https://www.npmjs.com/package/cogmemai-sdk)
 - [MCP Server (npm)](https://www.npmjs.com/package/cogmemai-mcp)
 - [GitHub](https://github.com/hifriendbot/cogmemai-python)
