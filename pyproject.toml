@@ -4,13 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "cogmemai"
-version = "1.0.1"
-description = "CogmemAi — Persistent memory for AI coding assistants"
+version = "1.0.2"
+description = "CogmemAi: the smart memory layer for everything Ai. Persistent, encrypted memory for agents, assistants, and robots. 95.10% LongMemEval."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.9"
 authors = [{ name = "HiFriendbot", email = "developers@hifriendbot.com" }]
-keywords = ["ai", "memory", "claude", "coding-assistant", "mcp", "developer-tools"]
+keywords = ["ai", "memory", "agents", "mcp", "robotics", "llm", "persistent-memory", "developer-tools"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",

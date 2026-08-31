@@ -1,6 +1,6 @@
 # CogmemAi Python SDK
 
-Persistent memory for AI coding assistants. Give your AI tools memory that persists across sessions.
+The smart memory layer for everything Ai. Persistent, encrypted recall for any Ai system: agents, assistants, robots, and the tools you already use. 95.10% on LongMemEval, the highest published score.
 
 ## Install
 
@@ -41,34 +41,34 @@ client.extract_memories(
 ## All Methods
 
 ### Core Memory
-- `save_memory(content, memory_type, category, subject, importance, scope, project_id)` — Save a memory
-- `recall_memories(query, limit, memory_type, scope)` — Semantic search
-- `extract_memories(user_message, assistant_response, previous_context)` — Ai extracts facts from conversation
-- `get_project_context(project_id, include_global, context)` — Load top memories with smart ranking
-- `list_memories(memory_type, category, scope, limit, offset)` — Browse with filters
-- `update_memory(memory_id, content, importance, scope)` — Edit a memory
-- `delete_memory(memory_id)` — Delete permanently
-- `get_usage()` — Check usage stats and tier
+- `save_memory(content, memory_type, category, subject, importance, scope, project_id)`, Save a memory
+- `recall_memories(query, limit, memory_type, scope)`, Semantic search
+- `extract_memories(user_message, assistant_response, previous_context)`, Ai extracts facts from conversation
+- `get_project_context(project_id, include_global, context)`, Load top memories with smart ranking
+- `list_memories(memory_type, category, scope, limit, offset)`, Browse with filters
+- `update_memory(memory_id, content, importance, scope)`, Edit a memory
+- `delete_memory(memory_id)`, Delete permanently
+- `get_usage()`, Check usage stats and tier
 
 ### Documents & Sessions
-- `ingest_document(text, document_type, project_id)` — Extract memories from docs
-- `save_session_summary(summary, project_id)` — Capture session accomplishments
+- `ingest_document(text, document_type, project_id)`, Extract memories from docs
+- `save_session_summary(summary, project_id)`, Capture session accomplishments
 
 ### Import / Export
-- `export_memories()` — Back up memories as JSON
-- `import_memories(memories)` — Bulk import from JSON
-- `get_memory_versions(memory_id)` — Version history
+- `export_memories()`, Back up memories as JSON
+- `import_memories(memories)`, Bulk import from JSON
+- `get_memory_versions(memory_id)`, Version history
 
 ### Team & Collaboration
-- `get_team_members(project_id)` — List team members
-- `invite_team_member(email, project_id, role)` — Invite a member
-- `remove_team_member(member_id)` — Remove a member
+- `get_team_members(project_id)`, List team members
+- `invite_team_member(email, project_id, role)`, Invite a member
+- `remove_team_member(member_id)`, Remove a member
 
 ### Memory Relationships & Promotion
-- `link_memories(memory_id, related_memory_id, relationship_type)` — Link related memories
-- `get_memory_links(memory_id)` — Get linked memories
-- `get_promotion_candidates()` — Find cross-project patterns
-- `promote_to_global(memory_id)` — Promote to global scope
+- `link_memories(memory_id, related_memory_id, relationship_type)`, Link related memories
+- `get_memory_links(memory_id)`, Get linked memories
+- `get_promotion_candidates()`, Find cross-project patterns
+- `promote_to_global(memory_id)`, Promote to global scope
 
 ## Error Handling
 
