@@ -70,6 +70,12 @@ client.extract_memories(
 - `get_promotion_candidates()`, Find cross-project patterns
 - `promote_to_global(memory_id)`, Promote to global scope
 
+### Guard & Review (the memory that says no, and checks the work)
+- `guard_check(action, kind=, context=, project_id=)`, Ask before acting: allow, ask or deny against remembered rules and the intent
+- `review_work(work, intent=, project_id=)`, Review finished work (a description, output, message or transcript) against the intent
+- `get_intent(project_id)`, Read the project intent document
+- `set_intent(project_id, content, changed_by=)`, Write the project intent document
+
 ## Error Handling
 
 ```python
