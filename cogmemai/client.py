@@ -463,3 +463,69 @@ class CogmemAi:
             Dict with promotion status.
         """
         return self._post(f"memory/{memory_id}/promote", {})
+
+    # -- Guard and review: the memory that says no, and checks the work --
+
+    def guard_check(
+        self,
+        action: str,
+        *,
+        kind: str = "action",
+        context: str = "",
+        project_id: str = "",
+    ) -> dict:
+        """Ask before acting.
+
+        Judges an action against the rules this person has asked their Ai to
+        keep (rule memories, global and project) and the NEVER and MUST lines
+        of the project intent.
+
+        Args:
+            action: The action about to be taken, in plain words or as the
+                exact command or message.
+            kind: "command", "action", "message" or "other".
+            context: Why, or what the person asked for.
+            project_id: Project whose rules and intent apply.
+
+        Returns:
+            Dict with "decision" (allow, ask or deny), "reason", "judged" and,
+            when one applies, "rule". Fails open: an error is an allow with
+            "judged" False.
+        """
+        return self._post(
+            "guard-check",
+            {"action": action, "kind": kind, "context": context, "project_id": project_id},
+        )
+
+    def review_work(
+        self,
+        work: str,
+        *,
+        intent: str = "",
+        project_id: str = "",
+    ) -> dict:
+        """Review finished work against the intent.
+
+        Args:
+            work: What was done: a description, the output, a message, or a
+                transcript.
+            intent: Intent to judge against when the project has no stored
+                intent document.
+            project_id: Project whose intent document applies.
+
+        Returns:
+            Dict with "judged", "summary", "covered", "uncovered",
+            "violations" and "coverage".
+        """
+        data: dict[str, Any] = {"work": work, "project_id": project_id}
+        if intent:
+            data["intent"] = intent
+        return self._post("intent-check", data)
+
+    def get_intent(self, project_id: str) -> dict:
+        """Read a project's intent document."""
+        return self._get("intent", {"project_id": project_id})
+
+    def set_intent(self, project_id: str, content: str, *, changed_by: str = "user") -> dict:
+        """Write a project's intent document: purpose, invariants, decisions, out of scope."""
+        return self._post("intent", {"project_id": project_id, "content": content, "changed_by": changed_by})

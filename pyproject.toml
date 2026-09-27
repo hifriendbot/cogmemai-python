@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "cogmemai"
-version = "1.0.2"
-description = "CogmemAi: the smart memory layer for everything Ai. Persistent, encrypted memory for agents, assistants, and robots. 95.10% LongMemEval."
+version = "1.1.0"
+description = "CogmemAi: a thinking, live memory for everything Ai. It remembers what matters, enforces the rules you set before anything happens, and reviews what your Ai did against what you asked. Persistent memory, guardrails and quality reviews for agents, assistants, robots and code. 95.10% LongMemEval."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.9"
