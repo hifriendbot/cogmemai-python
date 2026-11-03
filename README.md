@@ -1,6 +1,6 @@
 # CogmemAi Python SDK
 
-The smart memory layer for everything Ai. Persistent, encrypted recall for any Ai system: agents, assistants, robots, and the tools you already use. 95.10% on LongMemEval, the highest published score.
+The smart memory layer for everything Ai. Persistent, encrypted recall for any Ai system: agents, assistants, robots, and the tools you already use. Holds the top published score on LongMemEval ([the result](https://hifriendbot.com/tech/)).
 
 ## Install
 
